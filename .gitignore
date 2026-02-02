@@ -27,3 +27,6 @@ token.json
 # Deploy folder (we'll deploy from dist)
 AMC_Ready_To_Deploy/
 AMC_Website_Update_v1/
+
+# Local Netlify folder
+.netlify
