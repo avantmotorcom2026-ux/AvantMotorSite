@@ -1,8 +1,10 @@
 # Dependencies
 node_modules/
+website/node_modules/
 
 # Build output
 website/dist/
+dist/
 
 # Environment variables
 .env
@@ -23,10 +25,39 @@ Thumbs.db
 # Credentials
 credentials.json
 token.json
+service_account.json
 
-# Deploy folder (we'll deploy from dist)
+# Heavy Resource/Design Folders (Not required for site run)
+algorithmic-art/
+brand-guidelines/
+canvas-design/
+doc-coauthoring/
+docx/
+ezgif-*/
+frontend-design/
+internal-comms/
+mcp-builder/
+pdf/
+pptx/
+skill-creator/
+slack-gif-creator/
+templates/
+theme-factory/
+web-artifacts-builder/
+webapp-testing/
+xlsx/
+
+# Agent/Process Folders (Not required for site run)
+directives/
+execution/
 AMC_Ready_To_Deploy/
 AMC_Website_Update_v1/
 
-# Local Netlify folder
-.netlify
+# Local Netlify
+.netlify/
+
+# Specific files
+AvantMotor_Blog_Outlines.md
+AGENTS.md
+CLAUDE.md
+GEMINI.md
