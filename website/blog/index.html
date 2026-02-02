@@ -41,6 +41,12 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <style>
+        /* Force visibility for blog pages that don't use the scroll observer */
+        section {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
         /* Blog Specific Styles */
         .blog-hero {
             padding: 8rem 0 4rem;
@@ -120,16 +126,25 @@
     <!-- End Google Tag Manager (noscript) -->
     <!-- Navigation Landmark -->
     <header>
-        <nav id="main-nav" aria-label="Navigație Principală" style="background: var(--bg-deep);">
-            <div id="lang-switch">
+        <nav id="main-nav" class="blog-nav"
+            style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: var(--bg-deep);">
+            <div class="nav-left" style="display: flex; align-items: center; gap: 1.5rem;">
+                <!-- Back Link -->
                 <a href="/"
-                    style="color: var(--text-white); text-decoration: none; margin-right: auto; font-weight: bold;">←
-                    Înapoi la Site</a>
+                    style="color: var(--text-white); text-decoration: none; font-weight: bold; font-size: 0.9rem;"
+                    data-i18n="nav.back">← Înapoi la Site</a>
+
+                <!-- Language Switcher -->
+                <div id="lang-switch" style="display: flex; gap: 5px;">
+                    <button class="lang-btn active" data-lang="ro">RO</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
             </div>
 
-            <!-- Logo Landmark -->
-            <a href="/" id="logo-overlay" aria-label="Pagina Principală Avant Motor Com">
-                <img src="/assets/logo.png" alt="AMC Performance Logo" style="width: 100%; height: auto;">
+            <!-- Logo -->
+            <a href="/" id="logo-overlay" style="width: 120px;">
+                <img src="/assets/logo.png" alt="AMC Logo" style="width: 100%;">
             </a>
         </nav>
     </header>
@@ -262,6 +277,7 @@
         </div>
     </footer>
 
+    <script src="/js/blog.js"></script>
 </body>
 
 </html>
