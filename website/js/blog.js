@@ -42,6 +42,18 @@ function setLanguage(lang) {
     });
 
     localStorage.setItem('preferred-language', lang);
+
+    // Toggle Content Blocks (for whole article bodies or list items)
+    document.querySelectorAll('.lang-content').forEach(el => {
+        if (el.getAttribute('data-lang') === lang) {
+            el.style.display = 'block';
+            // Trigger a re-flow or animation if needed
+            setTimeout(() => el.style.opacity = 1, 10);
+        } else {
+            el.style.display = 'none';
+            el.style.opacity = 0;
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

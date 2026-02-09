@@ -1,283 +1,350 @@
 <!DOCTYPE html>
 <html lang="ro">
-
 <head>
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-T4HVBWH9');</script>
-    <!-- End Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4HVBWH9');</script>
+<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & Noutăți | Avant Motor Com Chișinău</title>
-
-    <!-- SEO & Performance -->
-    <meta name="description"
-        content="Articole utile despre întreținerea auto, noutăți din industria EV & Hybrid și sfaturi pentru șoferii din Moldova. Blog oficial Avant Motor Com.">
-    <meta name="keywords"
-        content="blog auto moldova, sfaturi auto chisinau, intretinere masina electrica, noutati auto 2026, avant motor blog">
-    <meta name="geo.region" content="MD-CU" />
-    <meta name="geo.placename" content="Chișinău" />
-    <meta name="geo.position" content="47.0076;28.8475" />
-    <meta name="ICBM" content="47.0076, 28.8475" />
-    <meta name="author" content="Avant Motor Com">
-    <link rel="canonical" href="https://avantmotor.md/blog/">
-
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="blog">
-    <meta property="og:url" content="https://avantmotor.md/blog/">
-    <meta property="og:title" content="Blog Avant Motor Com - Expertiză Auto">
-    <meta property="og:description"
-        content="Citește cele mai noi articole despre mentenanța auto, tehnologia hibrid și siguranța în trafic.">
-    <meta property="og:image" content="/assets/og-image.jpg">
-
-    <!-- Favicon -->
+    <title>Blog & Noutăți | Avant Motor Com</title>
     <link rel="icon" type="image/png" href="/assets/favicon.png">
     <link rel="stylesheet" href="/css/style.css">
-
     <style>
-        /* Force visibility for blog pages that don't use the scroll observer */
-        section {
-            opacity: 1 !important;
-            transform: none !important;
-        }
-
-        /* Blog Specific Styles */
-        .blog-hero {
-            padding: 8rem 0 4rem;
-            background: var(--bg-deep);
-            text-align: center;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .blog-card {
-            background: var(--bg-charcoal);
-            border: 1px solid var(--bg-gray);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-neon);
-            border-color: var(--accent-primary);
-        }
-
-        .blog-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-date {
-            font-size: 0.85rem;
-            color: var(--text-metallic);
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-title {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--text-white);
-            line-height: 1.4;
-        }
-
-        .blog-excerpt {
-            font-size: 0.95rem;
-            color: var(--text-gray);
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .read-more {
-            color: var(--accent-primary);
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .read-more:hover {
-            text-decoration: underline;
+        /* Force visibility */
+        section { opacity: 1 !important; transform: none !important; }
+        .blog-hero { padding: 8rem 0 4rem; background: var(--bg-deep); text-align: center; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .blog-card { background: var(--bg-charcoal); border: 1px solid var(--bg-gray); border-radius: var(--radius-md); overflow: hidden; transition: transform 0.3s ease; display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-5px); border-color: var(--accent-primary); }
+        .blog-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-date { font-size: 0.85rem; color: var(--text-metallic); margin-bottom: 0.5rem; }
+        .blog-title { font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-white); line-height: 1.4; }
+        .blog-excerpt { font-size: 0.95rem; color: var(--text-gray); margin-bottom: 1.5rem; flex-grow: 1; }
+        .read-more { color: var(--accent-primary); text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .blog-nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: var(--bg-deep); }
+        .nav-left { display: flex; align-items: center; gap: 1.5rem; }
+         @media (max-width: 768px) {
+            .blog-nav { padding: 1rem; flex-direction: column; gap: 1rem; }
+            .nav-left { flex-direction: column; }
         }
     </style>
 </head>
-
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4HVBWH9" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation Landmark -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4HVBWH9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <header>
-        <nav id="main-nav" class="blog-nav"
-            style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: var(--bg-deep);">
-            <div class="nav-left" style="display: flex; align-items: center; gap: 1.5rem;">
-                <!-- Back Link -->
-                <a href="/"
-                    style="color: var(--text-white); text-decoration: none; font-weight: bold; font-size: 0.9rem;"
-                    data-i18n="nav.back">← Înapoi la Site</a>
-
-                <!-- Language Switcher -->
-                <div id="lang-switch" style="display: flex; gap: 5px;">
-                    <button class="lang-btn active" data-lang="ro">RO</button>
-                    <button class="lang-btn" data-lang="ru">RU</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-            </div>
-
-            <!-- Logo -->
-            <a href="/" id="logo-overlay" style="width: 120px;">
-                <img src="/assets/logo.png" alt="AMC Logo" style="width: 100%;">
-            </a>
-        </nav>
+    <nav id="main-nav" class="blog-nav">
+      <div class="nav-left">
+          <a href="/" style="color: var(--text-white); text-decoration: none; font-weight: bold; font-size: 0.9rem;" data-i18n="nav.back">← Înapoi la Site</a>
+          <div id="lang-switch" style="display: flex; gap: 5px;">
+            <button class="lang-btn active" data-lang="ro">RO</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+      </div>
+      <a href="/" id="logo-overlay" style="width: 120px;">
+        <img src="/assets/logo.png" alt="AMC Logo" style="width: 100%;">
+      </a>
+    </nav>
     </header>
 
     <main>
         <section class="blog-hero container">
-            <h1 class="headline">Jurnal de Bord & Consultanță Tehnică</h1>
-            <p class="subheadline" style="max-width: 700px; margin: 0 auto;">Noutăți, sfaturi de întreținere și
-                expertiză direct din garajul Avant Motor Com.</p>
+            <div class="lang-content" data-lang="ro">
+                <h1 class="headline">Jurnal de Bord & Consultanță Tehnică</h1>
+                <p class="subheadline" style="max-width: 700px; margin: 0 auto;">Noutăți, sfaturi de întreținere și expertiză direct din garajul Avant Motor Com.</p>
+            </div>
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <h1 class="headline">Бортовой журнал и Технические советы</h1>
+                <p class="subheadline" style="max-width: 700px; margin: 0 auto;">Новости, советы по обслуживанию и экспертиза напрямую из гаража Avant Motor Com.</p>
+            </div>
+            <div class="lang-content" data-lang="en" style="display:none">
+                <h1 class="headline">Logbook & Technical Consulting</h1>
+                <p class="subheadline" style="max-width: 700px; margin: 0 auto;">News, maintenance tips, and expertise directly from the Avant Motor Com garage.</p>
+            </div>
         </section>
 
         <section class="container">
             <div class="blog-grid">
-                <!-- Post 1 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Featured • Ianuarie 2026</span>
-                        <h2 class="blog-title">Întreținerea mașinilor Hibrid și Electrice în Chișinău</h2>
-                        <p class="blog-excerpt">Mituri demontate și sfaturi esențiale pentru posesorii de vehicule eco
-                            în Moldova.</p>
-                        <a href="/blog/post-1.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
-                <!-- Post 2 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Ianuarie 2026</span>
-                        <h2 class="blog-title">26 de Ani de Avant Motor: Tradiție și Inginerie</h2>
-                        <p class="blog-excerpt">Cum am evoluat de la carburatoare la diagnoză AI pe strada Sfânta Vineri
-                            16A.</p>
-                        <a href="/blog/post-2.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
-                <!-- Post 3 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Ianuarie 2026</span>
-                        <h2 class="blog-title">Soluții pentru Flote Corporate: Mentenanță Preventivă</h2>
-                        <p class="blog-excerpt">Reducerea timpului de imobilizare și eficientizarea costurilor pentru
-                            afacerea ta.</p>
-                        <a href="/blog/post-3.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
-                <!-- Post 4 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Ianuarie 2026</span>
-                        <h2 class="blog-title">Diagnoza Computerizată vs. "Părerea Mecanicului"</h2>
-                        <p class="blog-excerpt">De ce o scanare profesională economisește bani pe termen lung.</p>
-                        <a href="/blog/post-4.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
-                <!-- Post 5 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Ianuarie 2026</span>
-                        <h2 class="blog-title">Suspensia și Drumurile din Moldova</h2>
-                        <p class="blog-excerpt">Cum să-ți protejezi mașina de gropi și denivelări. Importanța geometriei
-                            3D.</p>
-                        <a href="/blog/post-5.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
-                <!-- Post 6 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Ianuarie 2026</span>
-                        <h2 class="blog-title">Verificare Auto Second-Hand înainte de cumpărare</h2>
-                        <p class="blog-excerpt">Cum să eviți "țepele" și mașinile cu defecte ascunse aduse din import.
-                        </p>
-                        <a href="/blog/post-6.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
-                <!-- Post 7 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Ianuarie 2026</span>
-                        <h2 class="blog-title">Climatizarea Auto: Sănătate și Confort</h2>
-                        <p class="blog-excerpt">Igienizarea climei și verificarea freonului pentru un aer curat în
-                            habitaclu.</p>
-                        <a href="/blog/post-7.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
-                <!-- Post 8 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Ianuarie 2026</span>
-                        <h2 class="blog-title">Totul despre Schimbul de Ulei și Filtre</h2>
-                        <p class="blog-excerpt">Secretul longevității motorului tău în condiții de trafic urban.</p>
-                        <a href="/blog/post-8.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
-                <!-- Post 9 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Ianuarie 2026</span>
-                        <h2 class="blog-title">Frânele: Siguranța pe Primul Loc</h2>
-                        <p class="blog-excerpt">Semne că trebuie să schimbi plăcuțele sau discurile de frână.</p>
-                        <a href="/blog/post-9.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
-                <!-- Post 10 -->
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-date">Ianuarie 2026</span>
-                        <h2 class="blog-title">Martorii din Bord: Ce înseamnă și cum reacționăm</h2>
-                        <p class="blog-excerpt">Ghid rapid pentru Check Engine și alți martori de avertizare.</p>
-                        <a href="/blog/post-10.html" class="read-more">Citește Articolul →</a>
-                    </div>
-                </article>
-
+                
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">Întreținerea mașinilor Hibrid și Electrice în Chișinău</h2>
+                <p class="blog-excerpt">Mituri demontate și sfaturi esențiale pentru posesorii de vehicule eco în Moldova.</p>
+                <a href="/blog/post-1.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">Обслуживание Гибридов и Электромобилей в Кишиневе</h2>
+                <p class="blog-excerpt">Развенчание мифов и важные советы для владельцев эко-транспорта в Молдове.</p>
+                <a href="/blog/post-1.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">Hybrid and Electric Vehicle Maintenance in Chisinau</h2>
+                <p class="blog-excerpt">Debunking myths and essential tips for eco-vehicle owners in Moldova.</p>
+                <a href="/blog/post-1.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">26 de Ani de Avant Motor: Tradiție și Inginerie</h2>
+                <p class="blog-excerpt">Cum am evoluat de la carburatoare la diagnoză AI pe strada Sfânta Vineri 16A.</p>
+                <a href="/blog/post-2.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">26 Лет Avant Motor: Традиции и Инженерия</h2>
+                <p class="blog-excerpt">Как мы прошли путь от карбюраторов до AI-диагностики на улице Сф. Винерь 16А.</p>
+                <a href="/blog/post-2.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">26 Years of Avant Motor: Tradition and Engineering</h2>
+                <p class="blog-excerpt">How we evolved from carburetors to AI diagnostics on Sf. Vineri 16A.</p>
+                <a href="/blog/post-2.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">Soluții pentru Flote Corporate: Mentenanță Preventivă</h2>
+                <p class="blog-excerpt">Reducerea timpului de imobilizare și eficientizarea costurilor pentru afacerea ta.</p>
+                <a href="/blog/post-3.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">Решения для корпоративных флотов: Профилактика</h2>
+                <p class="blog-excerpt">Сокращение времени простоя и оптимизация расходов для вашего бизнеса.</p>
+                <a href="/blog/post-3.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">Corporate Fleet Solutions: Preventive Maintenance</h2>
+                <p class="blog-excerpt">Reducing downtime and optimizing costs for your business.</p>
+                <a href="/blog/post-3.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">Diagnoza Computerizată vs. 'Părerea Mecanicului'</h2>
+                <p class="blog-excerpt">De ce o scanare profesională economisește bani pe termen lung.</p>
+                <a href="/blog/post-4.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">Компьютерная Диагностика против 'Мнения Механика'</h2>
+                <p class="blog-excerpt">Почему профессиональное сканирование экономит деньги в долгосрочной перспективе.</p>
+                <a href="/blog/post-4.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">Computer Diagnostics vs. 'The Mechanic's Guess'</h2>
+                <p class="blog-excerpt">Why a professional scan saves money in the long run.</p>
+                <a href="/blog/post-4.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">Suspensia și Drumurile din Moldova</h2>
+                <p class="blog-excerpt">Cum să-ți protejezi mașina de gropi. Importanța geometriei 3D.</p>
+                <a href="/blog/post-5.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">Подвеска и Дороги Молдовы</h2>
+                <p class="blog-excerpt">Как защитить авто от ям. Важность 3D геометрии.</p>
+                <a href="/blog/post-5.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">Suspension and Moldovan Roads</h2>
+                <p class="blog-excerpt">How to protect your car from potholes. Importance of 3D alignment.</p>
+                <a href="/blog/post-5.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">Importul Auto Second-Hand: Verificarea Pre-Cumpărare</h2>
+                <p class="blog-excerpt">Cum să eviți 'țepele' și mașinile cu defecte ascunse.</p>
+                <a href="/blog/post-6.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">Импорт Б/У Авто: Проверка перед Покупкой</h2>
+                <p class="blog-excerpt">Как избежать проблем и скрытых дефектов.</p>
+                <a href="/blog/post-6.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">Used Car Import: Pre-Purchase Inspection</h2>
+                <p class="blog-excerpt">How to avoid lemons and hidden defects.</p>
+                <a href="/blog/post-6.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">Climatizarea Auto: Sănătate și Confort</h2>
+                <p class="blog-excerpt">Igienizarea climei și verificarea freonului.</p>
+                <a href="/blog/post-7.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">Автокондиционер: Здоровье и Комфорт</h2>
+                <p class="blog-excerpt">Дезинфекция климата и проверка фреона.</p>
+                <a href="/blog/post-7.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">Car A/C: Health and Comfort</h2>
+                <p class="blog-excerpt">Climate sanitization and freon check.</p>
+                <a href="/blog/post-7.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">Schimbul de Ulei și Filtre</h2>
+                <p class="blog-excerpt">Secretul longevității motorului tău.</p>
+                <a href="/blog/post-8.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">Замена Масла и Фильтров</h2>
+                <p class="blog-excerpt">Секрет долголетия вашего двигателя.</p>
+                <a href="/blog/post-8.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">Oil and Filter Change</h2>
+                <p class="blog-excerpt">The secret to your engine's longevity.</p>
+                <a href="/blog/post-8.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">Frânele: Siguranța pe Primul Loc</h2>
+                <p class="blog-excerpt">Semne că trebuie să schimbi plăcuțele.</p>
+                <a href="/blog/post-9.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">Тормоза: Безопасность прежде всего</h2>
+                <p class="blog-excerpt">Признаки того, что пора менять колодки.</p>
+                <a href="/blog/post-9.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">Brakes: Safety First</h2>
+                <p class="blog-excerpt">Signs you need to change pads.</p>
+                <a href="/blog/post-9.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="blog-content">
+            <!-- RO -->
+            <div class="lang-content" data-lang="ro">
+                <span class="blog-date">Ianuarie 2026</span>
+                <h2 class="blog-title">Martorii din Bord (Check Engine)</h2>
+                <p class="blog-excerpt">Ghid rapid pentru martori de avertizare.</p>
+                <a href="/blog/post-10.html" class="read-more">Citește Articolul →</a>
+            </div>
+            <!-- RU -->
+            <div class="lang-content" data-lang="ru" style="display:none">
+                <span class="blog-date">Январь 2026</span>
+                <h2 class="blog-title">Индикаторы на панели (Check Engine)</h2>
+                <p class="blog-excerpt">Краткий гид по предупреждающим значкам.</p>
+                <a href="/blog/post-10.html" class="read-more">Читать далее →</a>
+            </div>
+            <!-- EN -->
+            <div class="lang-content" data-lang="en" style="display:none">
+                <span class="blog-date">January 2026</span>
+                <h2 class="blog-title">Dashboard Lights (Check Engine)</h2>
+                <p class="blog-excerpt">Quick guide to warning lights.</p>
+                <a href="/blog/post-10.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </article>
+    
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <div class="footer-bottom">
-                <p>© 2026 Avant Motor Com. Toate drepturile rezervate. <br> <a href="/"
-                        style="color: var(--accent-primary); text-decoration: none;">Înapoi la pagina principală</a></p>
+            <div class="footer-bottom" style="text-align: center;">
+                <p data-i18n="footer.rights">© 2026 Avant Motor Com.</p>
             </div>
         </div>
     </footer>
-
     <script src="/js/blog.js"></script>
 </body>
-
 </html>

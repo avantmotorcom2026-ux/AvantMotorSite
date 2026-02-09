@@ -475,6 +475,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred-language') || 'ro';
     setLanguage(savedLang);
 
+    // 5. Attach Language Button Click Listeners
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const lang = e.target.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
+
     // Handle initial scroll state for transparent elements
     handleScrollEffects();
 });
